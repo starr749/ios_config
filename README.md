@@ -1,6 +1,6 @@
 # ios_config
 
-This gen provides an easy way to generate profiles and configuration payloads for use with Apple iOS devices. These profiles and payloads can be delivered via Apple MDM or Apple's Configurator or iPhone Configuration Utility (IPCU).
+This gem provides an easy way to generate profiles and configuration payloads for use with Apple iOS devices. These profiles and payloads can be delivered via Apple MDM or Apple's Configurator or iPhone Configuration Utility (IPCU).
 
 Not all of the possible configuration payloads have been implemented yet. Some options may be missing. If you need a particular payload or need additional support from an existing payload, please fork and implement it so that we can all benefit from your efforts!
 
@@ -82,7 +82,7 @@ profile_plist = profile.signed( [signing_cert_path], [intermediate_path], [key_p
 
 #### Parameters
 
-```
+```ruby
 allow_removal # if profile can be deleted by device user. defaults to true
 description   # (optional) displayed in device settings 
 display_name  # displayed in device settings
@@ -99,7 +99,7 @@ client_certs  # (optional) certificates used to encypt payloads
 
 #### Common Parameters
 
-```
+```ruby
 uuid
 identifier
 description
@@ -113,6 +113,7 @@ payload = IOSConfig::Payload::VPN.new(parameters).build
 
 Available parameters:
 
+```ruby
 connection_name    
 authentication_type  # :password, :rsa_securid
 connection_type      # :l2tp, :pptp, :ipsec, :anyconnect, :juniper_ssl, :f5_ssl, :sonicwall_modile_connect, :aruba_via
@@ -133,6 +134,7 @@ proxy_username
 realm     
 role             
 shared_secret      
+```
 
 ## Contributing
 
