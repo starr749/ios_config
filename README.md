@@ -46,7 +46,7 @@ payloads = [vpn_payload.build]
 
 # Create a profile instance
 
-profile = IOSConfig::Profile.new type: 			 "Configuration",
+profile = IOSConfig::Profile.new type:       "Configuration",
                                  display_name:   "A Profile Name",
                                  identifier:     "org.example.examplemdmservice.exampleprofile",
                                  organization:   "A Company Name",
