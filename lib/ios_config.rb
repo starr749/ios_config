@@ -1,2 +1,6 @@
 require 'core_ext/string'
-Gem.find_files("ios_config/**/*.rb").each { |path| require path }
+require 'ios_config/version'
+require 'ios_config/profile'
+require 'ios_config/payload/base'
+require 'ios_config/payload/vpn'
+require 'ios_config/payload/wifi'
