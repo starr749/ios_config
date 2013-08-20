@@ -136,6 +136,30 @@ role
 shared_secret      
 ```
 
+#### Wi-Fi
+
+
+```ruby
+payload = IOSConfig::Payload::WiFi.new(parameters).build
+```
+
+Available parameters:
+
+```ruby
+ssid
+hidden_network  # true, false
+auto_join       # true, fase
+encryption_type # :wep, :wpa, :any, :none
+password
+proxy_type      # :none, :manual, :auto
+proxy_server
+proxy_port
+proxy_username
+proxy_password
+proxy_url
+```
+
+
 ## Contributing
 
 1. Fork it

@@ -17,7 +17,8 @@ module IOSConfig
 
     def initialize(options = {})
       options.each { |k,v| self.send("#{k}=", v) }
-      
+      puts self.allow_removal
+      puts self.allow_removal.nil?
       self.allow_removal  = true if self.allow_removal.nil?
       self.type           ||= 'Configuration'
       self.version        ||= 1
