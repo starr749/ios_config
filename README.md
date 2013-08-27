@@ -105,6 +105,27 @@ identifier
 description
 ```
 
+#### AirPlay
+
+payload = IOSConfig::Payload::AirPlay.new(parameters).build
+
+Available parameters:
+
+```ruby
+whitelist   # array of DeviceIDs
+passwords   # array of dictionaries with keys :device_name and :password
+```
+
+#### AirPrint
+
+payload = IOSConfig::Payload::AirPrint.new(parameters).build
+
+Available parameters:
+
+```ruby
+airprint    # array of dictionaries with keys :ip_address and :resource_path
+```
+
 #### VPN
 
 ```ruby

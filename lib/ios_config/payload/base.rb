@@ -23,7 +23,7 @@ module IOSConfig
 
       def build
         p = { 'PayloadType'         => payload_type,
-              'PayloadVersion'      => 1,
+              'PayloadVersion'      => payload_version,
               'PayloadUUID'         => @uuid,
               'PayloadIdentifier'   => @identifier,
               'PayloadDescription'  => @description }
@@ -35,6 +35,10 @@ module IOSConfig
 
       def payload_type
         raise NotImplementedError
+      end
+
+      def payload_version
+        1
       end
 
     end
