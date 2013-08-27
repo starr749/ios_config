@@ -147,11 +147,20 @@ Available parameters:
 
 ```ruby
 ssid
-hidden_network  # true, false
-auto_join       # true, fase
-encryption_type # :wep, :wpa, :any, :none
+hidden_network  # true false
+auto_join       # true false
+encryption_type # wep wpa any none
+is_hotspot      # true false
+domain_name
+hessid
+service_provider_roaming_enabled  # true false
+roaming_consortium_ois            # array of strings
+nai_realm_names                   # array of strings
+mcc_and_mncs                      # array of strings
+displayed_operator_name
 password
-proxy_type      # :none, :manual, :auto
+priority        # integer
+proxy_type      # none manual auto
 proxy_server
 proxy_port
 proxy_username
