@@ -107,7 +107,9 @@ description
 
 #### AirPlay
 
+```ruby
 payload = IOSConfig::Payload::AirPlay.new(parameters).build
+```
 
 Available parameters:
 
@@ -118,7 +120,9 @@ passwords   # array of dictionaries with keys :device_name and :password
 
 #### AirPrint
 
+```ruby
 payload = IOSConfig::Payload::AirPrint.new(parameters).build
+```
 
 Available parameters:
 
