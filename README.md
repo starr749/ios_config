@@ -130,6 +130,22 @@ Available parameters:
 airprint    # array of dictionaries with keys :ip_address and :resource_path
 ```
 
+#### Single Sign-On Account
+
+```ruby
+payload = IOSConfig::Payload::SingleSignOnAccount.new(parameters).build
+```
+
+Available parameters:
+
+```ruby
+name
+principal_name,
+realm,
+url_prefix_matches,    # array of strings
+app_identifier_matches # array of strings
+```
+
 #### VPN
 
 ```ruby
