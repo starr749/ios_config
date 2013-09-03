@@ -15,12 +15,12 @@ module IOSConfig
       end
 
       def payload
-        p = { 'Name'  => @name,
-              'Realm' => @realm }
+        p = { 'Name'      => @name,
+              'Kerberos'  => { 'Realm' => @realm } }
 
-        p['PrincipalName']        = @principal_name         if @principal_name
-        p['URLPrefixMatches']     = @url_prefix_matches     if @url_prefix_matches
-        p['AppIdentifierMatches'] = @app_identifier_matches if @app_identifier_matches
+        p['Kerberos']['PrincipalName']        = @principal_name         if @principal_name
+        p['Kerberos']['URLPrefixMatches']     = @url_prefix_matches     if @url_prefix_matches
+        p['Kerberos']['AppIdentifierMatches'] = @app_identifier_matches if @app_identifier_matches
 
         p
       end
