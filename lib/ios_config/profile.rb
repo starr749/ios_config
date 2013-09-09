@@ -34,8 +34,6 @@ module IOSConfig
       signed_profile.to_der
     end
   
-    private
-  
     def unsigned
       raise_if_blank [:version, :uuid, :type, :identifier, :display_name]
     
@@ -63,6 +61,8 @@ module IOSConfig
 
       profile.to_plist
     end
+
+    private
   
     def raise_if_blank(required_attributes)
       required_attributes.each { |a| raise "#{a} must be set" if self.send(a).blank? }
