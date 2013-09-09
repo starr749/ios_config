@@ -11,10 +11,6 @@ module IOSConfig
         "com.apple.airplay"
       end
 
-      def payload_version
-        0
-      end
-
       def payload
         p = {}
 

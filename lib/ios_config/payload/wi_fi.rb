@@ -17,7 +17,7 @@ module IOSConfig
                     :service_provider_roaming_enabled,  # true, false
                     :roaming_consortium_ois,            # array of strings
                     :nai_realm_names,                   # array of strings
-                    :mcc_and_mncs,                      # array of strings
+                    :mcc_and_mncs,                      # array of strings, 6 characters each
                     :displayed_operator_name,
                     :password,
                     :priority,        # integer
